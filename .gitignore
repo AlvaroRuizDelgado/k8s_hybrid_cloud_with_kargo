@@ -1,0 +1,10 @@
+# Virtual environment
+venv
+
+# Compiled code
+*.pyc
+*.retry
+*.log
+*.terraform
+terraform.tfstate*
+kargo/
