@@ -1,3 +1,4 @@
+# OpenStack "all open" security group creation.
 
 openstack security group create --description "Fake k8s sg (all allowed)" k8s-sg
 
