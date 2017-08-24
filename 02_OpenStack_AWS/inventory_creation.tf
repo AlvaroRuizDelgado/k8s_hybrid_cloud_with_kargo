@@ -19,9 +19,9 @@ resource "null_resource" "ansible-provision" {
   provisioner "local-exec" {
     command =  "echo \"${join("\n",formatlist("%s ansible_ssh_host=%s", openstack_compute_instance_v2.k8s-node.*.name, openstack_compute_floatingip_v2.node-ip.*.address))}\" >> kargo/inventory/inventory"
   }
-  # provisioner "local-exec" {
-  #   command =  "echo \"${join("\n",formatlist("%s ansible_ssh_host=%s", aws_instance.aws_nodes.*.tags.name, aws_instance.aws_nodes.*.public_ip))}\" >> kargo/inventory/inventory"
-  # }
+  provisioner "local-exec" {
+    command =  "echo \"${join("\n",formatlist("%s ansible_ssh_host=%s", aws_instance.aws_nodes.*.tags.name, aws_instance.aws_nodes.*.public_ip))}\" >> kargo/inventory/inventory"
+  }
   # provisioner "local-exec" {
   #   command =  "echo \"[aws-node]\n${aws_instance.aws_nodes.tags.name} ansible_ssh_host=${aws_instance.aws_nodes.public_ip}\" > kargo/inventory/inventory"
   # }

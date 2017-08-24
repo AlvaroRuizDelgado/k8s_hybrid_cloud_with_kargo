@@ -54,7 +54,7 @@ variable "aws_region" {
 
 variable "centos7_ami" {
   description = "AMI of Centos 7 in AWS (US-West-2)."
-  default = "ami-0227f362"
+  default = "ami-f4533694"
   type = "string"
 }
 

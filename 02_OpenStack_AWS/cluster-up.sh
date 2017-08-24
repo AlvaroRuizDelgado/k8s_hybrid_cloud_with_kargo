@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##Download kargo
-git clone git@github.com:kubespray/kargo.git
+#git clone git@github.com:kubespray/kargo.git
 
 ##Create infrastructure and inventory file
 echo "Creating infrastructure"
